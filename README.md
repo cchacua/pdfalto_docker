@@ -15,8 +15,10 @@ Example:
 
 1. Run the container `pdfalto`
 - Using Docker run command:
-docker run -d -v PATHTOINPUTFOLDER:/home/jovyan/input/pdf -v PATHTOOUTPUTFOLDER:/home/jovyan/output --name pdfaltocontainer cchacua/pdfalto
 
+```
+docker run -d -v PATHTOINPUTFOLDER:/home/jovyan/input/pdf -v PATHTOOUTPUTFOLDER:/home/jovyan/output --name pdfaltocontainer cchacua/pdfalto
+```
 - Using Docker compose:
 ```
 version: '3'
@@ -31,9 +33,10 @@ services:
       
 ```
 
-2. Execute the container `pdfalto`, changing the options and specifying the path to your input pdf file and to your output xml file. E.g. To convert the first five pages (-f 1 -l 5) of `YOURPDFFILE.pdf` and save it as `YOURXMLFILE.xml`, you may write:
+2. Execute the container `pdfalto`, changing the options and specifying the path to your input pdf file and to your output xml file. E.g. To convert the first five pages (`-f 1 -l 5`) of `YOURPDFFILE.pdf` and save it as `YOURXMLFILE.xml`, you may write:
+```
 docker exec -it pdfaltocontainer /home/pdfalto/pdfalto/pdfalto -f 1 -l 5 -noImage -noImageInline -readingOrder -blocks /home/jovyan/input/pdf/YOURPDFFILE.pdf /home/jovyan/output/YOURXMLFILE.xml
-
+```
 For more information about the pdfalto options, please visit its official repository: https://github.com/kermitt2/pdfalto
 
 
