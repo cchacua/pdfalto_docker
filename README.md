@@ -13,7 +13,7 @@ You can save the xml-files in the same volume of the PDF files or you can mount 
 
 Example:
 
-1. Run the container `pdfalto`
+1. Run the container `pdfaltocontainer`, using the image `cchacua/pdfalto`
 - Using Docker run command:
 
 ```
