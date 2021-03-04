@@ -14,12 +14,12 @@ You can save the xml-files in the same volume of the PDF files or you can mount 
 Example:
 
 1. Run the container `pdfaltocontainer`, using the image `cchacua/pdfalto`
-- Using Docker run command:
+- With Docker run:
 
 ```
 docker run -d -v PATHTOINPUTFOLDER:/home/jovyan/input/pdf -v PATHTOOUTPUTFOLDER:/home/jovyan/output --name pdfaltocontainer cchacua/pdfalto
 ```
-- Using Docker compose:
+- With a Docker compose file:
 ```
 version: '3'
 
